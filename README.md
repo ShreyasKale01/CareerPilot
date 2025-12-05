@@ -1,20 +1,22 @@
-# HireMatch
+# CareerPilot
 
-HireMatch is a full-stack job portal that connects job seekers and employers through a modular web application built with a MERN-style architecture and a Python-based recommendation service. The platform supports secure authentication, job discovery, application tracking, employer-side job management, CV-driven job recommendations, and an AI-powered career assistant.
+CareerPilot is a full-stack job portal designed to simplify the job search and recruitment process. It brings job seekers and employers together through a unified platform for discovering opportunities, managing applications, and handling recruitment activities.
+
+The application combines a React-based frontend, a Node.js and Express backend, and a Python-powered recommendation service. Its key capabilities include secure user authentication, job listings and applications, employer dashboards, CV-based job recommendations using TF-IDF and cosine similarity, and an AI-powered career assistant.
 
 ## Features
 
-- JWT-based authentication for user registration and login
-- Job discovery with search, filtering, detailed job views, and application workflows
-- Application tracking with email notifications
-- Employer dashboard for company management, job posting, and applicant review
-- CV-based job recommendation using TF-IDF vectorization and cosine similarity
-- AI-powered career assistance using Google Gemini
+- Authentication: User registration and login using JWT-based authentication.
+- Job Discovery: Search and filter job listings, view job details, and submit applications.
+- Application Management: Manage application workflows and email notifications.
+- Employer Dashboard: Manage company information, post job openings, and review applicants.
+- Resume-Based Recommendations: Extract text from PDF resumes and rank job opportunities using TF-IDF vectorization and cosine similarity.
+- AI Career Assistant: Access career-related assistance through Google Gemini integration.
 
 ## Project Architecture
 
 ```text
-HireMatch/
+CareerPilot/
 ├── Backend/
 │   ├── index.js
 │   ├── controllers/
@@ -63,22 +65,21 @@ The `recommendation-engine/` is an independent Flask service responsible for pro
 
 ## Prerequisites
 
-Before running HireMatch locally, ensure the following are available:
-
+Before running CareerPilot locally, make sure you have:
 - Node.js 18+ and npm
 - Python 3.10+
-- MongoDB connection string
-- Cloudinary account credentials
-- Gmail SMTP credentials or another SMTP provider
-- Google Gemini API key
+- Access to MongoDB
+- Cloudinary credentials
+- SMTP credentials for email notifications
+- A Google Gemini API key if using the AI career assistant
 
 ## Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Pukar77/HireMatch.git
-cd HireMatch
+git clone https://github.com/ShreyasKale01/CareerPilot.git
+cd CareerPilot
 ```
 
 > If the GitHub repository uses a different name or URL, replace the commands above accordingly.
@@ -95,17 +96,17 @@ npm install
 Create a `Backend/.env` file:
 
 ```env
-MONGO_URI=your_mongodb_connection_string
-PORT=8000
-SECRET_KEY=your_jwt_secret
-CLOUD_NAME=your_cloudinary_cloud_name
-API_KEY=your_cloudinary_api_key
-API_SECRET=your_cloudinary_api_secret
-API_KEY1=your_gemini_api_key
+MONGO_URI = mongodb://localhost:27017/job-portal
+PORT = 8000
+SECRET_KEY = PUKARRIMAL
+CLOUD_NAME = dtmiggnjn
+API_KEY = 768732164244328
+API_SECRET = oDdW_NgJoEU7IA5Qlfwc5B0_eI8
+API_KEY1 = AIzaSyBQuzsIpUVbN8bZssDInQP5vx5oo5INTV0
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your_email_address
-SMTP_PASS=your_app_password
+SMTP_USER=pukarrimal11@gmail.com
+SMTP_PASS=gthu crfp uvtq xvzq
 ```
 
 ### 3. Configure the Frontend
@@ -193,7 +194,7 @@ python app.py
 
 ## Author
 
-Sarth Mhatre
+Shreyas Kale
 
-- Email: sarth.iit2005@gmail.com
+- Email: kaleshreyas6@gmail.com
 - IIT Indore
